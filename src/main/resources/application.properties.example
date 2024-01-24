@@ -1,0 +1,48 @@
+# Server
+server.port= Server Port to run on
+server.servlet.context-path= context-path
+
+debug=boolean
+
+
+# Mysql
+spring.datasource.url=jdbc:mysql://host:port/databaseName?createDatabaseIfNotExist=true&useSSL=false&allowPublicKeyRetrieval=true&connectionTimeZone=Asia/Calcutta
+spring.datasource.username=mysql username
+spring.datasource.password=mysql password
+
+#  JPA
+spring.jpa.show-sql=true
+spring.jpa.properties.hibernate.format_sql=true
+spring.jpa.generate-ddl=true
+
+#
+server.error.whitelabel.enabled=false
+
+#hibernate
+spring.jpa.properties.show_sql=true
+spring.jpa.hibernate.ddl-auto=update
+
+
+# time zone 
+# Asia/Calcutta
+app.config.time-zone=
+
+# bookings
+# 5
+# app.config.bookings.max-enabled-days=
+# 18:30
+# app.config.bookings.opening-time=
+
+# jwt
+app.jwt.secret=
+
+
+# logback
+logging.level.org.hibernate.orm.jdbc.bind=info
+logging.level.root=info
+# logging.level.org.hibernate.type=info
+logging.level.org.hibernate.type=info
+logging.level.org.hibernate.stat=info
+logging.pattern.console=%d{dd-MM-yy HH:mm:ss, Asia/Calcutta} %5p [%t] %c{10} [%M] - %m %n %n
+logging.file.name=app.log
+logging.pattern.file=%d{dd-MMM-yyyy hh:mm:ss a, Asia/Calcutta} %level [%thread] %logger{10} [%file:%line] %msg %n
